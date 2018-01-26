@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <title>Bootstrap</title>
+</head>
+<body>
+
+
+<!--
+* naam: Robin de Kogel
+* groep: 7a
+* datum: 26-1-2018
+-->
+
+<style>
+    p {
+        font-family: 'Cabin', sans-serif;
+    }
+
+    h1, h2, h3{
+        font-family: 'Cabin', sans-serif;
+        font-weight: 700;
+    }
+
+    h4, h5, h6 {
+        font-family: 'Cabin', sans-serif;
+        font-weight: 400;
+    }
+
+</style>
+
+<nav class="navbar navbar-inverse navbar-toggleable-sm " style="background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%) !important; color:#fff; !important;">
+    <div class="container">
+        <a href="#" class="navbar-brand mr-auto">Ice Hockey</a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="Webshop.html">Webshop</a>
+            <a class="nav-item nav-link active" href="Winkelwagen.html">Winkelwagen</a>
+        </div><!-- navbar-nav -->
+    </div><!-- container -->
+</nav>
+
+<header class="jumbotron jumbotron-fluid mb-0 text-white" style="background-image: url('icehockey/img/icehockey_head.jpg') !important; background-size: cover !important;">
+    <div class="container">
+        <div class="display-2 mb-4" style="color: #000 !important; font-family: 'Cabin', sans-serif;">Ice Hockey</div>
+        <h2 class="lead" style="color: #000000; font-family: 'Cabin', sans-serif;">Winkelwagen</h2>
+
+    </div>
+</header>
+
+<div class="container" id="services">
+    <div class="row">
+
+        <table class="table table-responsive table-xl" id="Producten">
+    <tbody>
+    <tr class=""><td> <img class="mr-5" src="icehockey/img/skates/skates1.jpg"></td><td class="mr-5"> <h2>Svensson Skates</h2><br> Model: BRR <br> Price: €45,- </td><td class="mr-5">Aantal<br><input class="form-control" type="number"  id="aantal1" value="0" placeholder=""></td><td class="mr-5">Subtotaal<br>  </td></tr>
+    <tr class=""><td> <img class="mr-5" src="icehockey/img/skates/skates3.png"></td><td class="mr-5"> <h2>Bensson Skates</h2><br> Model: BRR<br> Price: €55,- </td><td class="mr-5">Aantal<br><input class="form-control" type="number"  id="aantal2" value="0" placeholder=""></td><td class="mr-5">Subtotaal<br>  </td></tr>
+    <tr class=""><td> <img class="mr-5" src="icehockey/img/skates/skates6.png"></td><td class="mr-5"> <h2>Karlsson Skates</h2><br> Model: BRR <br> Price: €65,- </td><td class="mr-5">Aantal<br><input class="form-control" type="number"  id="aantal3" value="0" placeholder=""></td><td class="mr-5">Subtotaal<br>  </td></tr>
+    </tbody>
+</table>
+    </div>
+        <div class="container">
+            <form>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""> Met veters (1.25 per paar)</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""> Met beschermers (2.35 per paar)</label>
+                </div>
+            </form>
+        </div>
+    <section class="text-center">
+        <p>Totaal:</p>
+        <input type="text" id="PicExtPrice" Size=8>
+    <button class="btn btn-outline-info" id="totaal" onclick="calculatePrice()" style="align-items: center">Bereken totaal </button>
+    </section>
+    </div>
+
+
+
+<script>
+     var totaal;
+     var prijs1 = 45;
+     var prijs2 = 55;
+     var prijs3 = 65;
+
+     function calculatePrice() {
+         var p1 = document.getElementById("aantal1").value;
+         var p2 = document.getElementById("aantal2").value;
+         var p3 = document.getElementById("aantal3").value;
+
+         totaal = p1 * prijs1 + p2 * prijs2 + p3 * prijs3;
+
+         document.getElementById("PicExtPrice").value = totaal;
+
+     }
+
+</script>
+
+
+
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+<footer>
+    <h6 style="text-align: center; margin: 2%; color: #000000; "> Icehockey.Inc</h6>
+</footer>
+</html>
